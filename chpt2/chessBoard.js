@@ -17,17 +17,13 @@
 function chessBoard (size = 8) {
   var board = "";
   for (var i = 1; i <= size; i++) {
-    // console.log("line: " + i);
     for (var j = 0; j <= size; j++) {
       if ((i + j) % 2 == 0) {
-        // console.log("Character: " + j + " gets a '#' ");
         board += '#';
       } else {
-        // console.log("Character: " + j + " gets a ' ' ");
         board += ' ';
       }
     }
-    // console.log("new line");
     board += "\n";
   }
   return board;
