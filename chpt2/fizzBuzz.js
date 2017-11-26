@@ -12,6 +12,7 @@ function fizzBuzz () {
   }
 }
 console.log(fizzBuzz());
+
 /*
   ... Modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 
   (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
