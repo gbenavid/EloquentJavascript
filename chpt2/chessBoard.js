@@ -28,7 +28,7 @@ function chessBoard (size = 8) {
   }
   return board;
 }
-console.log(chessBoard());
+console.log(chessBoard(10));
 
 /*
   When you have a program that generates this pattern, define a variable size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
