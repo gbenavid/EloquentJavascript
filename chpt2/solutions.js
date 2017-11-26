@@ -1,3 +1,7 @@
+// THIS CODE IS WRITTEN BY HAVERBEKE. MY SOLUTIONS CAN BE FOUND UNDER THEIR RESPECTIVE FILES. 
+// I JUST PUT THESE HERE FOR YOUR CONVENIENCE IF YOU ARE USING THIS REPO AS A LEARNING TOOL.
+// YOU CAN ALSO SEE HAVERBEKES SOLUTION ON HIS SITE: http://eloquentjavascript.net/code
+
 // solution to looping a triangle:
 for (var line = "#"; line.length < 8; line += "#")
 console.log(line);
