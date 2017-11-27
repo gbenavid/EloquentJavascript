@@ -9,16 +9,15 @@ As a bonus assignment, modify your range function to
   If no step is given, the array elements go up by increments of one. 
 */
 
-function range (start, end) {
+function range (start, end, step = 1) {
   var collection = [];
   var i = start; 
   while (i <= end) {
     collection.push(i);
-    i++;
+    i += step;
   }
   return collection;
 }
-// console.log(range(1, 10));
 
 function sum (collection) {
   var sum = 0;
@@ -28,7 +27,6 @@ function sum (collection) {
   return sum;
 }
 
-console.log(sum(range(1, 10)));
-
-// console.log(range(1, 10, 2)); //-> [1, 3, 5, 7, 9]
-// console.log(range(5, 2, -1)); //->  [5, 4, 3, 2]
+// console.log(sum(range(1, 10)));
+console.log(range(1, 10, 2)); //-> [1, 3, 5, 7, 9];
+console.log(range(5, 2, -1)); //->  [5, 4, 3, 2];
