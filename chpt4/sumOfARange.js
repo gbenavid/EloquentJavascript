@@ -9,6 +9,9 @@ As a bonus assignment, modify your range function to
   If no step is given, the array elements go up by increments of one. 
 */
 
+// Ehh.. I'm not that happy with the solution to range() & countDown(). Pull request anyone?
+// Even after looking at the answer I feel like this is somehow awkward.
+
 function range (start, end, step = 1) {
   if (step < 0) { return countDown(start, end, step) }
   var collection = [];
@@ -37,7 +40,3 @@ function sum (collection) {
   }
   return sum;
 }
-
-console.log(sum(range(1, 10))); //-> 55
-console.log(range(1, 10, 2)); //-> [1, 3, 5, 7, 9];
-console.log(range(5, 2, -1)); //->  [5, 4, 3, 2];
