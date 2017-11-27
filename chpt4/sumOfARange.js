@@ -1,6 +1,6 @@
 /*
 range() takes two arguments, start and end, and 
-  returns an array containing all the numbers from start up to (and including) end.
+  returns an array containing all the numbers from start up to end.
 
 sum() takes an array of numbers and returns the sum of these numbers.
 
@@ -18,10 +18,17 @@ function range (start, end) {
   }
   return collection;
 }
-console.log(range(1, 10));
+// console.log(range(1, 10));
 
-function sum () {}
-// console.log(sum(range(1, 10))); //-> 55
+function sum (collection) {
+  var sum = 0;
+  for (var i = 0; i < collection.length; i++) {
+    sum += collection[i];
+  }
+  return sum;
+}
+
+console.log(sum(range(1, 10)));
 
 // console.log(range(1, 10, 2)); //-> [1, 3, 5, 7, 9]
 // console.log(range(5, 2, -1)); //->  [5, 4, 3, 2]
