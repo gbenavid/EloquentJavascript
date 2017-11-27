@@ -10,12 +10,19 @@ As a bonus assignment, modify your range function to
 */
 
 function range (start, end, step = 1) {
-  if (step < 0) { return countDown(start, end, step) }
+  // if (step < 0) { return countDown(start, end, step) }
   var collection = [];
   var i = start; 
-  while (i <= end) {
-    collection.push(i);
-    i += step;
+  if (i > 0) {
+    while (i <= end) {
+      collection.push(i);
+      i += step;
+    }
+  } else {
+    while (i >= end) {
+      collection.push(i);
+      i += step;
+    }
   }
   return collection;
 }
