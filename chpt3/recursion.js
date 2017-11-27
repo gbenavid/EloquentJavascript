@@ -1,13 +1,20 @@
 /* 
-Here’s another way to define whether a positive whole number is even or odd:
- Zero is even.
+Zero is even.
 One is odd.
- For any other number N, its evenness is the same as N - 2. 
-The function should accept a number parameter and return a Boolean.
+For any other number N, its evenness is the same as N - 2.
 */
 
-function isEven () { }
+function isEven (num) {
+  // check is number is 0 
+  if (num == 0) {
+    return true;
+  }
+  if (num == 1) {
+    return false;
+  }
+  return isEven(num - 2);
+}
 
-// console.log(isEven(75));
-// console.log(isEven(50));
-// console.log(isEven(-1));
+// console.log(isEven(75)); // false
+// console.log(isEven(50)); // true
+// console.log(isEven(-1)); // false
