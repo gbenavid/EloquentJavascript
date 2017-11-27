@@ -11,5 +11,14 @@ function min(a, b) {
 
 # Recursion
 ```javascript
-  // Haverbekes solution here.
+function isEven(n) {
+  if (n == 0)
+    return true;
+  else if (n == 1)
+    return false;
+  else if (n < 0)
+    return isEven(-n); // I like how he did this bit
+  else
+    return isEven(n - 2);
+}
 ```

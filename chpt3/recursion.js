@@ -17,5 +17,3 @@ function isEven (num) {
     return isEven(num - 2);
   }
 }
-
-console.log(isEven(-2)); // false
