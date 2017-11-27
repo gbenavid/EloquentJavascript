@@ -4,4 +4,13 @@ countChar() behaves like countBs() but also takes a single character that is to 
 **Rewrite countBs to make use of this new function.
  */
 
-function countBs() {}
+function countBs(str) {
+  var count = 0;
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] == 'B') {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countBs("ginaB"));
