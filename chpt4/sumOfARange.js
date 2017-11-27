@@ -15,7 +15,7 @@ function range (start, end, step = 1) {
   var i = start; 
   while (i <= end) {
     collection.push(i);
-      i += step;
+    i += step;
   }
   return collection;
 }
@@ -38,6 +38,6 @@ function sum (collection) {
   return sum;
 }
 
-console.log(sum(range(1, 10)));
+console.log(sum(range(1, 10))); //-> 55
 console.log(range(1, 10, 2)); //-> [1, 3, 5, 7, 9];
 console.log(range(5, 2, -1)); //->  [5, 4, 3, 2];
