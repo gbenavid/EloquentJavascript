@@ -20,7 +20,7 @@ function reverseArray(array) {
 var arrayValue = [1, 2, 3, 4, 5];
 function reverseArrayInPlace(array) {
   for (var i = array.length - 1; i >= 0; i -= 1) {
-    
+    console.log(array[i] + " should swap with: " + array[array.length - 1 - i]);
   }
 }
 reverseArrayInPlace(arrayValue);
