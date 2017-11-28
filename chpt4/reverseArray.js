@@ -10,14 +10,14 @@ Which one is more efficient?
 
 function reverseArray(array) {
   var newArray = [];
-  for (var i = array.length - 1; i > 0; i--) {
-    console.log(array[i]);
+  for (var i = array.length - 1; i >= 0; i--) {
+    newArray.push(array[i]);
   }
   return newArray;
 }
 console.log(reverseArray(["A", "B", "C"])); // → ["C", "B", "A"];
 
-var arrayValue = [1, 2, 3, 4, 5];
-function reverseArrayInPlace(array) { }
-reverseArrayInPlace(arrayValue);
-console.log(arrayValue); // → [5, 4, 3, 2, 1]
+// var arrayValue = [1, 2, 3, 4, 5];
+// function reverseArrayInPlace(array) { }
+// reverseArrayInPlace(arrayValue);
+// console.log(arrayValue); // → [5, 4, 3, 2, 1]
