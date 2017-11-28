@@ -6,8 +6,22 @@
     or undefined when there is no such element. ***recursive version requested.
 */
 function arrayToList(array) {
+  var list = {};
+  var valueCounter = 0;
+  // list['value'] = index 0 in array -> {value: 1}
+    // remove index 0 from array
+    // valueCounter++;
+      // list['rest'] = ...; {value: 1, rest: {}}
+        // remove index 0 from array
+        // list['rest'] = array
+          // value 2 in list is index 0 in array
   
+  return list;
 }
+// input -> [1, 2, 3]; output -> var list = { value: 1, rest: { value: 2, rest: { value: 3, rest: null } } };
+// var list = { value: 1, rest: 
+                            // { value: 2, rest: 
+                                              // { value: 3, rest: null } } };
 
 console.log(arrayToList([10, 20])); 
 /*   
