@@ -8,14 +8,13 @@
 function arrayToList(array) {
   // loop over array and start with the last element
   // the last element will help build the final nested list -> {value: 3; rest: null}
-    // i--
-      // value: i (value = 2)
+    var rest = null;
+    for (var i = array.length - 1; i >= 0; i -= 1) {
+    // value: i (value = 2)
       // rest = list = {value: 3, rest: null}
       // list = {value: 2, rest = list}
-      // i--
-        // value = 1
-        // rest = list = {value: 2, rest = {value: 3, rest: null}}
-        // i-- ; i >= 0 loop terminates
+    }
+      // rest = list = {value: 2, rest = {value: 3, rest: null}}
 }
 // input: [1, 2, 3]; output: list = { value: 1, rest: { value: 2, rest: { value: 3, rest: null }}};
 
