@@ -12,8 +12,6 @@ function arrayToList(array) {
     }
     return list;
 }
-console.log(arrayToList([1, 2, 3])) //=> { value: 1, rest: { value: 2, rest: { value: 3, rest: null }}};
-// console.log(arrayToList([10, 20])); // {value: 10, rest: {value: 20, rest: null}
 
 function listToArray(list) { } // console.log(listToArray(arrayToList([10, 20, 30]))); // → [10, 20, 30]
 
