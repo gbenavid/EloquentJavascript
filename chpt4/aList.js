@@ -6,17 +6,16 @@
     or undefined when there is no such element. ***recursive version requested.
 */
 function arrayToList(array) {
-  var list = {};
-  var valueCounter = 0;
-  // list['value'] = index 0 in array -> {value: 1}
-    // remove index 0 from array
-    // valueCounter++;
-      // list['rest'] = ...; {value: 1, rest: {}}
-        // remove index 0 from array
-        // list['rest'] = array
-          // value 2 in list is index 0 in array
-  
-  return list;
+  // loop over array and start with the last element
+  // the last element will help build the final nested list -> {value: 3; rest: null}
+    // i--
+      // value: i (value = 2)
+      // rest = list = {value: 3, rest: null}
+      // list = {value: 2, rest = list}
+      // i--
+        // value = 1
+        // rest = list = {value: 2, rest = {value: 3, rest: null}}
+        // i-- ; i >= 0 loop terminates
 }
 // input: [1, 2, 3]; output: list = { value: 1, rest: { value: 2, rest: { value: 3, rest: null }}};
 
