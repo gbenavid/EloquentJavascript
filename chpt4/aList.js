@@ -6,19 +6,13 @@
     or undefined when there is no such element. ***recursive version requested.
 */
 function arrayToList(array) {
-    var start = null;
-    var list = {};
+    var list = null;
     for (var i = array.length - 1; i >= 0; i -= 1) {
-      var innerList = {value: array[i], rest: start}
-      console.log(innerList);
-      // value: i (value = 2)
-        // rest = list = {value: 3, rest: null}
-        // list = {value: 2, rest = list}
+      list = {value: array[i], rest: list}
     }
-      // rest = list = {value: 2, rest = {value: 3, rest: null}}
-      return list;
+    return list;
 }
-arrayToList([1, 2, 3]) //=> { value: 1, rest: { value: 2, rest: { value: 3, rest: null }}};
+console.log(arrayToList([1, 2, 3])) //=> { value: 1, rest: { value: 2, rest: { value: 3, rest: null }}};
 // console.log(arrayToList([10, 20])); // {value: 10, rest: {value: 20, rest: null}
 
 function listToArray(list) { } // console.log(listToArray(arrayToList([10, 20, 30]))); // → [10, 20, 30]
