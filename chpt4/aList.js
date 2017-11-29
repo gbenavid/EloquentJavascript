@@ -23,9 +23,12 @@ function listToArray(obj, array = []) {
   }
 }
 
-// * prepend(el, list) which creates a new list that adds the element to the front of the list, 
+// honestly I got help from my friend with these last two, I was confused on the instructions given in the book + overthinking to the max.
 function prepend (el, list) {
   return {value: el, rest: list};
 }
 
-function nth(list, num) { } // console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
+function nth(list, num) {
+
+} 
+// console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
