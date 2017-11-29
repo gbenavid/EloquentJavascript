@@ -22,10 +22,10 @@ function listToArray(obj, array = []) {
     return array; // the return statement is here because this is when we hit the bottom of our list and obj.value == null
   }
 }
-// console.log(listToArray(arrayToList([10, 20, 30]))); // → [10, 20, 30]
 
 // * prepend(el, list) which creates a new list that adds the element to the front of the list, 
 function prepend (el, list) {
+  return {value: el, rest: list};
 }
 
 // console.log(prepend(20, null));
