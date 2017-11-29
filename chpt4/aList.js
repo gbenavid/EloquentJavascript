@@ -22,13 +22,13 @@ function listToArray(obj, array = []) {
     return array; // the return statement is here because this is when we hit the bottom of our list and obj.value == null
   }
 }
-// console.log(listToArray(arrayToList([10, 20, 30]))); // → [10, 20, 30]
 
-// * prepend(el, list) which creates a new list that adds the element to the front of the list, 
+// honestly I got help from my friend with these last two, I was confused on the instructions given in the book + overthinking to the max.
 function prepend (el, list) {
+  return {value: el, rest: list};
 }
 
-// console.log(prepend(20, null));
-console.log( prepend( 10, prepend(20, null))); // → {value: 10, rest: {value: 20, rest: null}}
+function nth(list, num) {
 
-function nth(list, num) { } // console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
+} 
+// console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20

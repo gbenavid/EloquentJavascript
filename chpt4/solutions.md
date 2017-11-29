@@ -58,4 +58,19 @@ function listToArray(list) {
   return array;
 }
 
+function prepend(value, list) {
+  return {value: value, rest: list};
+}
+
+// I need help on generating an explanation for this code & understanding why it works.
+function nth(list, n) {
+  if (!list)
+    return undefined;
+  else if (n == 0)
+    return list.value;
+  else
+    return nth(list.rest, n - 1);
+}
+
+console.log(nth(arrayToList([10, 20, 30]), 1));
 ```
