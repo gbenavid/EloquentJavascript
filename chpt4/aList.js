@@ -13,7 +13,16 @@ function arrayToList(array) {
     return list;
 }
 
-function listToArray(list) { } // console.log(listToArray(arrayToList([10, 20, 30]))); // → [10, 20, 30]
+function listToArray(obj, array = []) {
+  for (const prop in obj) {
+    if (typeof obj.value !== null ) {
+      array.push(obj.value);
+      listToArray(obj.rest, array);
+    }
+    return array; // the return statement is here because this is when we hit the bottom of our list and obj.value == null
+  }
+}
+console.log(listToArray(arrayToList([10, 20, 30]))); // → [10, 20, 30]
 
 function prepend (el, list) { } // console.log(prepend(10, prepend(20, null))); // → {value: 10, rest: {value: 20, rest: null}}
 
