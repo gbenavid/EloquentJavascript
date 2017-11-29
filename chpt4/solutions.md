@@ -49,4 +49,13 @@ function arrayToList(array) {
     list = {value: array[i], rest: list};
   return list;
 }
+
+// I thought this solution was very clever compared to my approach and studying it was quite informative.
+function listToArray(list) {
+  var array = [];
+  for (var node = list; node; node = node.rest)
+    array.push(node.value);
+  return array;
+}
+
 ```
