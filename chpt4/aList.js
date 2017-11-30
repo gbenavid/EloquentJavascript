@@ -28,7 +28,13 @@ function prepend (el, list) {
   return {value: el, rest: list};
 }
 
-// OOP: 
+// OOP: programing is based on human entities, we're modeling real life objects.
+// Everything is an object in Javascript. But when we use objects to hold information.
+// objects as data structure/ data storing material are different 
+// LISTS:
+// singly linked lists: in nodes. A -> B -> C -> D -> E ...
+// double linked lists: nodes have two memory locations which is the node in front and the node in back
+// 
 
 function nth(list, n) {
   if (!list) // if list is empty
