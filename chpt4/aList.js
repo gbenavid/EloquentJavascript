@@ -27,12 +27,3 @@ function listToArray(obj, array = []) {
 function prepend (el, list) {
   return {value: el, rest: list};
 }
-
-function nth(list, position) {
-  // if there isnt an element @ position
-    // return undefined;
-  // else if position @ 0 
-    // return list['value']
-  // otherwise call nth(list, n - 1)
-} 
-// console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
