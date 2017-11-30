@@ -27,3 +27,14 @@ function listToArray(obj, array = []) {
 function prepend (el, list) {
   return {value: el, rest: list};
 }
+
+// OOP: 
+
+function nth(list, n) {
+  if (!list) // if list is empty
+    return undefined;
+  else if (n == 0) // 
+    return list.value;
+  else
+    return nth(list.rest, n - 1);
+}
