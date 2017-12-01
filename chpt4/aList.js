@@ -31,10 +31,15 @@ function prepend (el, list) {
 // OOP: programing is based on human entities, we're modeling real life objects.
 // Everything is an object in Javascript. But when we use objects to hold information.
 // objects as data structure/ data storing material are different 
+
 // LISTS:
-// singly linked lists: in nodes. A -> B -> C -> D -> E ...
+// singly linked lists: in nodes. A -> B -> C -> D -> E ... Searching starts from 0 and move through each one. It have the search location stored in its memory. This prevents us from doing exact look ups. An array may or may not be a doubly linked list, but it can never be a singly linked list, this depends on which programing language you're using.
+
 // double linked lists: nodes have two memory locations which is the node in front and the node in back
-// 
+// when searching for a location the node does not have a 
+
+// STACKS AND QUES:
+// Soli `d state drives: stores info like a processor. RAMs and other thing hard drives used to be layers or 
 
 function nth(list, n) {
   if (!list) // if list is empty
