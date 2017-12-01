@@ -1,16 +1,20 @@
 var ancestry = JSON.parse(require("./resources/ancestry.js"));
 /*
-Using the data from ./resources/ancestry.js, compute the average age difference between mothers and children. 
-You can use the average function defined earlier in this chapter.
+  Using the data from ./resources/ancestry.js, compute the average age difference between mothers and children. 
+  You can use the average function defined earlier in this chapter.
 
-Note that not all the mothers mentioned in the data are themselves present in the array. The byName object, which makes it easy to find a person’s object from their name, might be useful here.
+  Note that not all the mothers mentioned in the data are themselves present in the array. The byName object, which makes it easy to find a person’s object from their name, might be useful here.
 */
+// filter out the mothers with no data
 function filterMoms(ancestryData) {
-  console.log(ancestryData.length)
-  for (var person = 0; person < ancestryData.length; person++) { }
+  var mothers = [];
+  mothers = ancestryData.filter(function(person) {
+    return person.mother;
+  });
+  return mothers.length;
 }
 console.log(filterMoms(ancestry));
-// filter out the mothers with no data
+
 // find the mothers age
 // find the average of all of those ages
 // output average age of mothers
