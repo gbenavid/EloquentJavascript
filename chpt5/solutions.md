@@ -6,3 +6,12 @@ console.log(arrays.reduce(function(flat, current) {
   return flat.concat(current);
 }, []));
 ```
+
+# Mother-child age difference
+```javascript
+var differences = ancestry.filter(function(person) {
+  return byName[person.mother] != null;
+}).map(function(person) {
+  return person.born - byName[person.mother].born;
+});
+```
