@@ -1,5 +1,4 @@
 var ancestry = require("./resources/ancestry.js");
-console.log(ancestry);
 /*
 Using the data from ./resources/ancestry.js, compute the average age difference between mothers and children. 
 You can use the average function defined earlier in this chapter.
@@ -8,5 +7,6 @@ Note that not all the mothers mentioned in the data are themselves present in th
 */
 
 // filter out the mothers with no data
-
+// find the mothers age
+// find the average of all of those ages
 // output average age of mothers
