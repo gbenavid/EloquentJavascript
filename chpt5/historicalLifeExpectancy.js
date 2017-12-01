@@ -1,3 +1,4 @@
+var ancestry = JSON.parse(require("./resources/ancestry.js"));
 // When we looked up all the people in our data set that lived more than 90 years, only the latest generation in the data came out. Let’s take a closer look at that phenomenon.
 
 // Output the average age of the people in the ancestry data set per century. 
