@@ -39,13 +39,13 @@ function prepend (el, list) {
 // when searching for a location the node does not have a 
 
 // STACKS AND QUES:
-// Soli `d state drives: stores info like a processor. RAMs and other thing hard drives used to be layers or 
+// Solid state drives(SSD): stores info like a processor. RAMs and other thing hard drives used to be layers or 
 
 function nth(list, n) {
   if (!list) // if list is empty
     return undefined;
-  else if (n == 0) // 
+  else if (n == 0) // base case.
     return list.value;
   else
-    return nth(list.rest, n - 1);
+    return nth(list.rest, n - 1); // recursive call.
 }
