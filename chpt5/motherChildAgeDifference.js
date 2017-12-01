@@ -25,4 +25,9 @@ function collectedAges (mothersAge) {
 }
 
 // find the average of all of those ages
+function average(array) {
+  function plus(a, b) { return a + b; }
+  return array.reduce(plus) / array.length;
+}
+
 // output average age of mothers
