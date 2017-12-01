@@ -11,7 +11,6 @@ ancestry.forEach(function(person) {
   byName[person.name] = person;
 });
 
-// filter out the mothers with no data
 function filterMoms(ancestryData) {
   var mothers = ancestryData.filter(function(person) {
     return person.mother;
@@ -20,9 +19,17 @@ function filterMoms(ancestryData) {
 }
 
 // find the mothers age
-function collectedAges (mothersAge) {
-
+function collectedAges (ancestryData) {
+  for (var person = 0; person < ancestryData.length; person += 1) {
+    // get the mothers name of the child
+    console.log(ancestryData[person].mother);
+  }
+  
+  // find that mother by her name
+    // look at the mothers birth year
+    // add mothers age to ages array
 }
+collectedAges(filterMoms(ancestry));
 
 // find the average of all of those ages
 function average(array) {
