@@ -15,3 +15,29 @@ var differences = ancestry.filter(function(person) {
   return person.born - byName[person.mother].born;
 });
 ```
+
+# Historical Life Expectancy
+```javascript
+function groupBy(array, groupOf) { // I'd like a better understanding of the 2nd arg
+  var groups = {};
+  array.forEach(function(element) {
+    var groupName = groupOf(element);
+    if (groupName in groups)
+      groups[groupName].push(element);
+    else
+      groups[groupName] = [element];
+  });
+  return groups;
+}
+
+var byCentury = groupBy(ancestry, function(person) {
+  return Math.ceil(person.died / 100);
+});
+
+for (var century in byCentury) {
+  var ages = byCentury[century].map(function(person) {
+    return person.died - person.born;
+  });
+  console.log(century + ": " + average(ages));
+}
+```
