@@ -7,5 +7,19 @@ function average(array) {
   return array.reduce(plus) / array.length;
 }
 
-
-// console.log(average(perCentury(ancestry)));
+function historicalLifeExpectancy(ancestryData) {
+  // split ancestry data into sub arrays i.e: peopleGroupedByCentury => {16: [81, 99, 100], 17: [12, 90, 70, 40] ...}
+  var peopleGroupedByCentury =  {};
+  ancestryData.map(function(personObject) {
+    var century = Math.ceil(personObject.died / 100); // calculate the century for this current person
+    console.log(century);
+  //   if (peopleGroupedByCentury.century) {
+  //     peopleGroupedByCentury.century.push(personObject.died - personObject.born);
+  //   } else {
+  //     peopleGroupedByCentury.century = [personObject.died - personObject.born];
+  //   }
+  });
+  // return peopleGroupedByCentury; 
+}
+console.log(historicalLifeExpectancy(ancestry));
+ 
