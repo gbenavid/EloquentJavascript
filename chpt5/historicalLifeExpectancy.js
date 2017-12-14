@@ -8,18 +8,17 @@ function average(array) {
 }
 
 function historicalLifeExpectancy(ancestryData) {
-  // split ancestry data into sub arrays i.e: peopleGroupedByCentury => {16: [81, 99, 100], 17: [12, 90, 70, 40] ...}
+  // divide each person's age into sub arrays within an object.
   var peopleGroupedByCentury =  {};
-  ancestryData.map(function(personObject) {
-    var century = Math.ceil(personObject.died / 100); // calculate the century for this current person
-    console.log(century);
-  //   if (peopleGroupedByCentury.century) {
-  //     peopleGroupedByCentury.century.push(personObject.died - personObject.born);
-  //   } else {
-  //     peopleGroupedByCentury.century = [personObject.died - personObject.born];
-  //   }
+  ancestryData.map( function(personObject) {
+    var century = (Math.ceil(personObject.died / 100)).toString();
+    if (peopleGroupedByCentury.hasOwnProperty(century)) {
+      peopleGroupedByCentury[century].push(personObject.died - personObject.born);
+    } else {
+      peopleGroupedByCentury[century] = [personObject.died - personObject.born];
+    }
   });
-  // return peopleGroupedByCentury; 
+  return peopleGroupedByCentury;
 }
 console.log(historicalLifeExpectancy(ancestry));
  
