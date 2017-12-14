@@ -8,7 +8,6 @@ function average(array) {
 }
 
 function historicalLifeExpectancy(ancestryData) {
-  // divide each person's age into sub arrays within an object.
   var peopleGroupedByCentury =  {};
   ancestryData.map( function(personObject) {
     var century = (Math.ceil(personObject.died / 100)).toString();
@@ -20,5 +19,14 @@ function historicalLifeExpectancy(ancestryData) {
   });
   return peopleGroupedByCentury;
 }
-console.log(historicalLifeExpectancy(ancestry));
- 
+
+function print (centuryObjectWithAgesArray) {
+  var centuriesInArray = Object.keys(centuryObjectWithAgesArray);
+  var i = 0;
+  for (var century in centuryObjectWithAgesArray) {
+    console.log(`In the ${centuriesInArray[i]}th people had a life expectancy of ${Math.floor(average(centuryObjectWithAgesArray[century]))} years old.`); //=> avg of peoples ages
+    i += 1;
+  }
+}
+
+print(historicalLifeExpectancy(ancestry));
