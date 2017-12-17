@@ -19,5 +19,12 @@ function every(array, predicate){
     }
   }
 }
-console.log(every([NaN, NaN, NaN], isNaN));
-console.log(every([NaN, NaN, 4], isNaN));
+
+function some(array, predicate) {
+  var i = 0;
+  while (i <= array.length - 1) {
+    if (predicate(array[i])) { return true }
+    i += 1;
+  }
+  return false;
+}
