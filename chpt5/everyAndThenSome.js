@@ -8,9 +8,10 @@ Similarly, some() returns true as soon as the predicate returns true for any of 
 function every(array, predicate){
   var i = 0;
   while (i < array.length) {
-    if (i == array.length - 1 && predicate(array[i])) { // could i use | op and nest the if statement?
-      return true;
-    } else if (predicate(array[i])) {
+    if (predicate(array[i])) {
+      if (i == array.length - 1) {
+        return true;
+      }
       i += 1;
     }
     else {
