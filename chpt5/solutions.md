@@ -41,3 +41,22 @@ for (var century in byCentury) {
   console.log(century + ": " + average(ages));
 }
 ```
+
+# Every And Then Some
+```javascript
+function every(array, predicate) {
+  for (var i = 0; i < array.length; i++) {
+    if (!predicate(array[i]))
+      return false;
+  }
+  return true;
+}
+
+function some(array, predicate) {
+  for (var i = 0; i < array.length; i++) {
+    if (predicate(array[i]))
+      return true;
+  }
+  return false;
+}
+```
