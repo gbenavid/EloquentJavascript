@@ -6,12 +6,17 @@ Similarly, some() returns true as soon as the predicate returns true for any of 
 */
 
 function every(array, predicate){
-  // * every el in array must be true *
-  // loop
-    // if all element == predicate
-      // return true
-    // else 
-      // return false
+  var i = 0;
+  while (i < array.length) {
+    if (i == array.length - 1 && predicate(array[i])) { // could i use | op and nest the if statement?
+      return true;
+    } else if (predicate(array[i])) {
+      i += 1;
+    }
+    else {
+      return false;
+    }
+  }
 }
-console.log(every([NaN, NaN, NaN], isNaN)); // true
-console.log(every([NaN, NaN, 4], isNaN)); // false
+console.log(every([NaN, NaN, NaN], isNaN));
+console.log(every([NaN, NaN, 4], isNaN));
