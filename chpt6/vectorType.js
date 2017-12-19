@@ -10,12 +10,19 @@ Add a getter property length to the prototype that computes the length of the ve
 the distance of the point (x, y) from the origin (0, 0).
 */
 
-function Vector (x, y) {
+function Vector(x, y) {
   this.x = x;
   this.y = y;
 }
 
+Vector.prototype.plus = function (vectorInstance) {
+  return vectorInstance.x + vectorInstance.y;
+};
+// Vector.prototype.minus = function (vectorInstance) {
+  // subtract the values in vectorInstance.x - vectorInstance.y;
+// };
+
 // expectations:
-console.log(new Vector(1, 2).plus(new Vector(2, 3))); // → Vector{x: 3, y: 5}
-console.log(new Vector(1, 2).minus(new Vector(2, 3))); // → Vector{x: -1, y: -1}
-console.log(new Vector(3, 4).length); // → 5
+// console.log(new Vector(1, 2).plus(new Vector(2, 3))); // → Vector{x: 3, y: 5}
+// console.log(new Vector(1, 2).minus(new Vector(2, 3))); // → Vector{x: -1, y: -1}
+// console.log(new Vector(3, 4).length); // → 5
