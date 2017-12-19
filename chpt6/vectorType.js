@@ -16,13 +16,12 @@ function Vector(x, y) {
 }
 
 Vector.prototype.plus = function (vectorInstance) {
-  return vectorInstance.x + vectorInstance.y;
-};
-Vector.prototype.minus = function (vectorInstance) {
-  return vectorInstance.x - vectorInstance.y;
+  return new Vector(this.x + vectorInstance.x, vectorInstance.y + this.y);
 };
 
+// Vector.prototype.minus = function (vectorInstance) {// return vectorInstance.x - vectorInstance.y;};
+
 // expectations:
-// console.log(new Vector(1, 2).plus(new Vector(2, 3))); // → Vector{x: 3, y: 5}
+console.log(new Vector(1, 2).plus(new Vector(2, 3))); // → Vector{x: 3, y: 5}
 // console.log(new Vector(1, 2).minus(new Vector(2, 3))); // → Vector{x: -1, y: -1}
 // console.log(new Vector(3, 4).length); // → 5
