@@ -18,9 +18,9 @@ function Vector(x, y) {
 Vector.prototype.plus = function (vectorInstance) {
   return vectorInstance.x + vectorInstance.y;
 };
-// Vector.prototype.minus = function (vectorInstance) {
-  // subtract the values in vectorInstance.x - vectorInstance.y;
-// };
+Vector.prototype.minus = function (vectorInstance) {
+  return vectorInstance.x - vectorInstance.y;
+};
 
 // expectations:
 // console.log(new Vector(1, 2).plus(new Vector(2, 3))); // → Vector{x: 3, y: 5}
