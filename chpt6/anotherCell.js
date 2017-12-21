@@ -6,6 +6,12 @@
  even if the inner cell would naturally be smaller.
  */
 
+ function StretchCell(inner, width, height) {
+  this.inner = inner;
+}
+StretchCell.prototype.minWidth = function() {
+  return this.inner.width;
+}
 // var sc = new StretchCell(new TextCell("abc"), 1, 2);
 // console.log(sc.minWidth()); // → 3
 // console.log(sc.minHeight()); // → 2
