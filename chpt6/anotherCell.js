@@ -1,3 +1,4 @@
+import * as TextCell from "./src/constructors.js"
 /*
  Implement a cell type named StretchCell(inner, width, height) that 
  conforms to the table cell interface described earlier in the chapter. 
