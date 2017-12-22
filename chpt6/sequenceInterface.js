@@ -1,6 +1,6 @@
 /*
-Design an interface. 
-The Sequential object is an interface that represents a sequence
+  Design an interface. 
+  The Sequential object is an interface that represents a sequence
 */
 
 function Sequential() {
@@ -10,18 +10,21 @@ function Sequential() {
   // code that uses Sequential can iterate over their sequence
 }
 
-function logFive() {
+function logFive(sequentialObject) {
   // takes a sequence object and calls console.log on its first five elements—or fewer, if the sequence has fewer than five elements.
+  // if typeof sequentialObject === "ArraySeq" || "Array"
+  
 }
 
 function ArraySeq() {
-  // wraps an array and allows iteration over the array using the interface you designed.
+  // wraps an array and allows iteration over the array using Sequential.
 }
 
 function RangeSeq (startingNumber, endpointNumber) {
-  this.from = startingNumber;
-  this.to = endpointNumber;
-  // iterates over a range of integers instead.
+  // iterates over a range of integers using Sequential
+  //? this.from = startingNumber;
+  //? this.to = endpointNumber;
+  // returns array
 }
 // logFive(new ArraySeq([1, 2]));
 // → 1
