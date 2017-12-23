@@ -3,11 +3,12 @@
   The Sequential object is an interface that represents a sequence
 */
 
-function Sequential() {
+function Sequential(collection) {
   // abstracts iteration over a collection of values
-  // looks at the element values it is made up of 
   // knows when the end of the sequence is reached.
-  // code that uses Sequential can iterate over their sequence
+  // type is observed Array, List »» Container.
+  // elements in container are observed »» string/ num/ objects.
+  // loop
 }
 
 function logFive(sequentialObject) {
