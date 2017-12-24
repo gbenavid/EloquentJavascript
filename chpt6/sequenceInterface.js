@@ -3,29 +3,34 @@
   The Sequential object is an interface that represents a sequence
 */
 
-function Sequential() {
-  // abstracts iteration over a collection of values
-  // looks at the element values it is made up of 
-  // knows when the end of the sequence is reached.
-  // code that uses Sequential can iterate over their sequence
+function Sequential(array) {
+  this.last = array.length - 1;
+  this.contents = array;
+}
+
+Sequential.prototype.x = function() {
+  // what functionality should Sequential have access to?
 }
 
 function logFive(sequentialObject) {
-  // takes a sequence object and calls console.log on its first five elements—or fewer, if the sequence has fewer than five elements.
-  // if typeof sequentialObject === "ArraySeq" || "Array"
-  
+  let calls = sequentialObject.last < 5 ? sequentialObject.last : 5;
+  let i = 0;
+  while (i < calls) {
+    console.log(sequentialObject.array[calls]);
+    i += 1;
+  }
 }
 
-function ArraySeq() {
-  // wraps an array and allows iteration over the array using Sequential.
+function ArraySeq(array) { 
+  return Sequential(array);
 }
 
 function RangeSeq (startingNumber, endpointNumber) {
-  // iterates over a range of integers using Sequential
   //? this.from = startingNumber;
   //? this.to = endpointNumber;
-  // returns array
+  // returns array of integers
 }
+
 // logFive(new ArraySeq([1, 2]));
 // → 1
 // → 2
