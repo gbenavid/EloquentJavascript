@@ -3,19 +3,20 @@
   The Sequential object is an interface that represents a sequence
 */
 
-function Sequential(sequentialObject, calls) {
-  // this.isA = typeof sequentialObject;
-  // this.last = calls || sequentialObject.length;
-  // loop is based on type
-    // for i in/ while/ for
-  // return array
+function Sequential(array) {
+  this.last = array.length - 1;
+  this.contents = array;
+}
+
+Sequential.prototype.x = function() {
+  // what functionality should Sequential have access to?
 }
 
 function logFive(sequentialObject) {
-  let calls = sequentialObject.length < 5 ? sequentialObject.length : 5;
+  let calls = sequentialObject.last < 5 ? sequentialObject.last : 5;
   let i = 0;
   while (i < calls) {
-    console.log(sequentialObject[calls]);
+    console.log(sequentialObject.array[calls]);
     i += 1;
   }
 }
