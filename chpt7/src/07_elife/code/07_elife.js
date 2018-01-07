@@ -20,6 +20,7 @@ Vector.prototype.plus = function(other) {
   return new Vector(this.x + other.x, this.y + other.y);
 };
 
+// This code defines the Grid object, with some basic methods:
 function Grid(width, height) {
   this.space = new Array(width * height);
   this.width = width;
