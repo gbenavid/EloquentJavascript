@@ -1,4 +1,3 @@
-console.log("hit elife.js");
 var plan = ["############################",
             "#      #    #      o      ##",
             "#                          #",
@@ -289,20 +288,61 @@ PlantEater.prototype.act = function(view) {
     return {type: "move", direction: space};
 };
 
-var valley = new LifelikeWorld(
-  ["############################",
-   "#####                 ######",
-   "##   ***                **##",
-   "#   *##**         **  O  *##",
-   "#    ***     O    ##**    *#",
-   "#       O         ##***    #",
-   "#                 ##**     #",
-   "#   O       #*             #",
-   "#*          #**       O    #",
-   "#***        ##**    O    **#",
-   "##****     ###***       *###",
-   "############################"],
+function SmartPlantEater() {
+  this.energy = 20;
+}
+SmartPlantEater.prototype.act = function(view) {
+  var space = view.find(" ");
+  if (this.energy > 85 && space)
+    return {type: "reproduce", direction: space};
+  var plant = view.find("*");
+  if (plant && this.energy < 100)
+    return {type: "eat", direction: plant};
+  if (space)
+    return {type: "move", direction: space};
+}
+
+function Tiger() {}
+/*
+  var valley = new LifelikeWorld(
+    ["############################",
+    "#####                 ######",
+    "##   ***                **##",
+    "#   *##**         **  O  *##",
+    "#    ***     O    ##**    *#",
+    "#       O         ##***    #",
+    "#                 ##**     #",
+    "#   O       #*             #",
+    "#*          #**       O    #",
+    "#***        ##**    O    **#",
+    "##****     ###***       *###",
+    "############################"],
+    {"#": Wall,
+    "O": SmartPlantEater,
+    "*": Plant}
+  );
+*/
+var valley = animateWorld(new LifelikeWorld(
+  ["####################################################",
+   "#                 ####         ****              ###",
+   "#   *  @  ##                 ########       OO    ##",
+   "#   *    ##        O O                 ****       *#",
+   "#       ##*                        ##########     *#",
+   "#      ##***  *         ****                     **#",
+   "#* **  #  *  ***      #########                  **#",
+   "#* **  #      *               #   *              **#",
+   "#     ##              #   O   #  ***          ######",
+   "#*            @       #       #   *        O  #    #",
+   "#*                    #  ######                 ** #",
+   "###          ****          ***                  ** #",
+   "#       O                        @         O       #",
+   "#   *     ##  ##  ##  ##               ###      *  #",
+   "#   **         #              *       #####  O     #",
+   "##  **  O   O  #  #    ***  ***        ###      ** #",
+   "###               #   *****                    ****#",
+   "####################################################"],
   {"#": Wall,
-   "O": PlantEater,
+   "@": Tiger,
+   "O": SmartPlantEater,
    "*": Plant}
-);
+));
