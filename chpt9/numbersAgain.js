@@ -11,7 +11,7 @@
 // JavaScript numbers, but a lone dot isn’t.
 
 // Fill in this regular expression.
-var number = /^...$/;
+var number = /^[+\-]?(\d+(\.\d*)?|\.\d+)([eE][+\-]?\d+)?$/;
 
 // Tests:
 ["1", "-1", "+15", "1.55", ".5", "5.", "1.3e2", "1E-4",
